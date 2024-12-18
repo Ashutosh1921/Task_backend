@@ -1,0 +1,22 @@
+GET http://localhost:5000
+###
+
+POST http://localhost:5000/tasks
+Content-Type: application/json
+
+{
+  "ID": 1,
+  "Title": "Complete project documentation",
+  "Description": "Write detailed documentation for the project including APIs and workflows.",
+  "Due_Date": "2024-12-31T23:59:59.000Z",
+  "Priority": 1,
+  "Status": "in-progress"
+}
+
+###
+POST http://localhost:5000/register/del
+Content-Type: application/json
+
+{
+   "command":"ASasd@123"
+}
