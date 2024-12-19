@@ -6,7 +6,7 @@ const taskroutes = require("./routes/task");
 const express = require("express");
 const app = express();
 app.use(express.json());
-const POST = process.env.PORT || "5000";
+const PORT = process.env.PORT || "5000";
 // instace of express
 // connecting mongodb
 mongoose.connect("mongodb://localhost:27017/DB")
