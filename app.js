@@ -9,11 +9,11 @@ app.use(express.json());
 const PORT = process.env.PORT || "5000";
 // instace of express
 // connecting mongodb
-const MONGODB_URL = process.env.MONGODB_URI || 27017;
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/DB"; // Fallback to local if not defined
 
-mongoose.connect(`mongodb://localhost:${MONGODB_URL}/DB`)
-    .then(() => console.log("connect to db"))
-    .catch(err => console.log(err));
+mongoose.connect(MONGODB_URI)
+    .then(() => console.log("Connected to MongoDB"))
+    .catch(err => console.log("MongoDB connection error: ", err));
 
 
 app.get("/", (req, res) => {
