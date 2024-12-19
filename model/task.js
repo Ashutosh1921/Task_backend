@@ -4,7 +4,6 @@ const { type } = require("os");
 const taskSchema = new mongoose.Schema({
     ID: {
         type: Number,
-        required: true,
     },
     Title: {
         type: String,
