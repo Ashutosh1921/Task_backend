@@ -6,6 +6,7 @@ const taskroutes = require("./routes/task");
 const express = require("express");
 const app = express();
 app.use(express.json());
+const POST = process.env.PORT || "5000";
 // instace of express
 // connecting mongodb
 mongoose.connect("mongodb://localhost:27017/DB")
@@ -21,6 +22,6 @@ app.use("/register", auth);
 app.use("/tasks", taskroutes);
 
 
-app.listen(5000, function () {
+app.listen(PORT, function () {
     console.log("server is runing");
 })
